@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100dvh;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    color: aliceblue;
+    background-color: #151515;
+}
+
+.menu-navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background-color: #252525;
+}
+
+.menu-navegacao ul {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.menu-navegacao a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.menu-navegacao button {
+    border: none;
+    background-color: #202020;
+    color: aliceblue;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.menu-navegacao button:hover{
+    transform: scale(1.1);
+}
+
+.titulo {
+    font-family: "Permanent Marker", sans-serif;
+    font-size: 40px;
+    margin-left: 10rem;
+}
+
+.back-foot {
+    height: 30dvh;
+    background-color: #414141;
+}
+
+.pesquisa {
+    height: 35px;
+    border: none;
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+
+}
+
+.barra-pesquisa {
+    display: flex;
+}
+
+
+.lupa {
+    background-color: aliceblue;
+    display: flex;
+    height: 35px;
+    width: 35px;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+    cursor: pointer;
+
+}
