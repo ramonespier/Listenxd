@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&display=swap');
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+    color: aliceblue;
+    background-color: #151515;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+ 
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+ 
+.album-cover {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+ 
+.tracklist {
+    margin-top: 30px;
+    text-align: left;
+}
+ 
+.track {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+}
+ 
+.track:last-child {
+    border-bottom: none;
+}
+ 
+.play-button {
+    background-color: #353535;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.kanye:hover{
+    background-color: red;
+}
+
+.carti:hover {
+    background-color: red;   
+}
+
+.travis:hover {
+    background-color: gold;
+}
+
+.tyler:hover {
+    background-color: orange;
+}
+ 
+.botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}

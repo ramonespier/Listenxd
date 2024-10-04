@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +8,149 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-        <header>
-            <nav class="menu-navegacao">
+    <header>
+        <nav class="menu-navegacao">
 
-                <span class="titulo">Listenxd</span>
+            <span class="titulo">Listenxd</span>
 
-                <ul>
-                    <button type="menu">Perfil ▿</button>
-                    <li><a href="#">Catálogo</a></li>
+            <div class="drops">
+                <button type="button" class="perfil">Perfil ▿</button>
 
-                    <div class="barra-pesquisa">
-                        <input class="pesquisa" list="artistas" type="search" placeholder="Pesquisar...">
-                        <datalist id="artistas">
-                            <option value="System of a Down"></option>
-                            <option value="Metallica"></option>
-                            <option value="Black Sabbath"></option>
-                            <option value="Linkin Park"></option>
-                            <option value="Kanye West"></option>
-                            <option value="Playboy Carti"></option>
-                            <option value="Travis Scott"></option>
-                            <option value="Tyler, the Creator"></option>
-                        </datalist>
-
-                        <div class="lupa">
-                            <img src="" alt="">
-                        </div>
+                <div>
+                    <div id="barraLateral" class="barraLateral">
+                        <a href="#" class="fechar" onclick="toggleBarra()">&times;</a>
+                        <a href="#" onclick="toggleDropdown(event)">Metallica</a>
+                        <ul class="top3">
+                            <li>Fade to Black - Remastered</li>
+                            <li>For Whom The Bell Tolls - Remastered</li>
+                            <li>Creeping Death - Creeping Death EP Version/Remastered</li>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">System of a Down</a>
+                        <ul class="top3">
+                            <li>B.Y.O.B</li>
+                            <li>Radio/Video</li>
+                            <li>Lost in Hollywood</li>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Black Sabbath</a>
+                        <ul class="top3">
+                            <li>Paranoid</li>
+                            <li>War Pigs</li>
+                            <li>Iron Man</li>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Linkin Park</a>
+                        <ul class="top3">
+                            <li>In the End</li>
+                            <li>Papercut</li>
+                            <li>Crawling</li>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Playboy Carti</a>
+                        <ul class="top3">
+                            <li>M3tamorphosis (feat. Kid Cudi)</li>
+                            <li>Sky</li>
+                            <li>Go2DaMoon (feat. Kid Cudi)</li>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Travis Scott</a>
+                        <ul class="top3">
+                            <li>Sicko Mode</li>
+                            <li>Butterfly Effect</li>
+                            <li>No Bystanders (feat. Swae Lee & Don Toliver)</li>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Tyler, the Creator</a>
+                        <ul class="top3">
+                            <li>See You Again (feat. Kali Uchis)</li>
+                            <li>Who Dat Boy (feat. A$AP Rocky)</li>
+                            <li>911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)</li>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Kanye West</a>
+                        <ul class="top3">
+                            <li>Runaway (feat. Pusha T)</li>
+                            <li>Power</li>
+                            <li>All of the Lights (feat. Rihanna)</li>
+                        </ul>
                     </div>
 
-                </ul>
-            </nav>
-        </header>
-
-        
-        <footer>
-            <div class="back-foot">
-                <div class="topicos">
-                    <ul>
-                        <li><a href="#">Desenvolvedores</a></li>
-                        <li><a href="#">Termos de uso</a></li>
-                        <li><a href="#">Novidades</a></li>
-                        <li><a href="#">Aplicativas</a></li>
-                    </ul>
+                    <div id="menu">
+                        <button onclick="toggleBarra()">Mais tocadas ☰</button>
+                    </div>
                 </div>
             </div>
-        </footer>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="album-container">
+            <a href="./html/Kanye_West.html">
+                <div class="album">
+                    <img src="../img/kanyewest.jpg" alt="Capa do Álbum 1">
+                    <h2>My Beautiful Dark Twisted Fantasy </h2>
+                    <p>Kayne West</p>
+                </div>
+            </a>
+            <div class="album">
+                <img src="../img/71MT2hjHBvL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 2">
+                <h2>Mezmerize</h2>
+                <p>System of a Down
+                </p>
+            </div>
+            <div class="album">
+                <img src="../img/61EYnmmbzaL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 3">
+                <h2>Ride the Lightning</h2>
+                <p>Metallica
+                </p>
+            </div>
+            <a href="./html/carti.html">
+                <div class="album">
+                    <img src="../img/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Capa do Álbum 4">
+                    <h2>Whole Lotta Red</h2>
+                    <p>Playboi Carti
+                    </p>
+                </div>
+            </a>
+            <a href="./html/travis.html">
+                <div class="album">
+                    <img src="../img/81nFF-rXdRL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 5">
+                    <h2>Astroword</h2>
+                    <p>Travis Scott</p>
+                </div>
+            </a>
+            <div class="album">
+                <img src="../img/71Ls2qvxPjL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 6">
+                <h2>Flower Boy</h2>
+                <p>Tyler, the Creator</p>
+            </div>
+            <div class="album">
+                <img src="../img/81jFI+p-oLL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 7">
+                <h2>Hybrid Theory</h2>
+                <p>Linkin Park</p>
+            </div>
+            <div class="album">
+                <img src="../img/Black_Sabbath_-_Paranoid.jpg" alt="Capa do Álbum 8">
+                <h2>Paranoid</h2>
+                <p>Black Sabbath
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="back-foot">
+            <div class="topicos">
+                <ul>
+                    <li><a href="#">Desenvolvedores</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Aplicativas</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/barraLateral.js"></script>
+    <script src="../js/doubleDrop.js"></script>
 </body>
+
 </html>
