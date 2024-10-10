@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Permanent+Marker&display=swap');
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100dvh;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     color: aliceblue;
@@ -69,6 +73,22 @@ h1 {
 
 .tyler:hover {
     background-color: orange;
+}
+
+.soad:hover {
+    background-color: red;
+}
+
+.park:hover {
+    background-color: darkgray;
+}
+
+.metallica:hover {
+    background-color: rgb(85, 139, 255);
+}
+
+.sabbath:hover {
+    background-color: purple;
 }
  
 .botao {

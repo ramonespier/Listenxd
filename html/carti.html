@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whole Lotta Red</title>
+    <link rel="stylesheet" href="../reset.css">
     <link rel="stylesheet" href="../albuns.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
+    <header>
+        <nav class="menu-navegacao">
+
+            <a href="../index.html" class="titulo">Listenxd</a href="#">
+
+            <div class="drops">
+                <button type="button" class="perfil">Perfil ▿</button>
+
+                <div>
+                    <div id="barraLateral" class="barraLateral">
+                        <a href="#" class="fechar" onclick="toggleBarra()">&times;</a>
+                        <div class="reprodutor">
+                            <audio id="audio"   controls></audio>
+                            <div class="nomeMusica"></div>
+                        </div>
+                        <a href="#" onclick="toggleDropdown(event)">Metallica</a>
+                        <ul class="top3">
+                            <!-- <button id="play">Play</button> -->
+                            <!-- <div id="musica-conteiner"> -->
+                            <button class="botao-musica" data-index="0">Fade to Black - Remastered</button>
+                            <!-- </div> -->
+                            <button class="botao-musica" data-index="1">For Whom The Bell Tolls - Remastered</button>
+                            <button class="botao-musica" data-index="2">Creeping Death - Creeping Death EP Version/Remastered</button>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">System of a Down</a>
+                        <ul class="top3">
+                            <button class="botao-musica" data-index="3">B.Y.O.B</button>
+                            <button class="botao-musica" data-index="4">Radio/Video</button>
+                            <button class="botao-musica" data-index="5">Lost in Hollywood</button>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Black Sabbath</a>
+                        <ul class="top3">
+                            <button class="botao-musica" data-index="6">Paranoid</button>
+                            <button class="botao-musica" data-index="7">War Pigs</button>
+                            <button class="botao-musica" data-index="8">Iron Man</button>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Linkin Park</a>
+                        <ul class="top3">
+                            <button class="botao-musica" data-index="9">In the End</button>
+                            <button class="botao-musica" data-index="10">Papercut</button>
+                            <button class="botao-musica" data-index="11">Crawling</button>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Playboy Carti</a>
+                        <ul class="top3">
+                            <button class="botao-musica" data-index="12">M3tamorphosis (feat. Kid Cudi)</button>
+                            <button class="botao-musica" data-index="13">Sky</button>
+                            <button class="botao-musica" data-index="14">Go2DaMoon (feat. Kid Cudi)</button>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Travis Scott</a>
+                        <ul class="top3">
+                            <button class="botao-musica" data-index="15">Sicko Mode</button>
+                            <button class="botao-musica" data-index="16">Butterfly Effect</button>
+                            <button class="botao-musica" data-index="17">No Bystanders (feat. Swae Lee & Don Toliver)</button>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Tyler, the Creator</a>
+                        <ul class="top3">
+                            <button class="botao-musica" data-index="18">See You Again (feat. Kali Uchis)</button>
+                            <button class="botao-musica" data-index="19">Who Dat Boy (feat. A$AP Rocky)</button>
+                            <button class="botao-musica" data-index="20">911 / Mr. Lonely (feat. Frank Ocean & Steve Lacy)</button>
+                        </ul>
+                        <a href="#" onclick="toggleDropdown(event)">Kanye West</a>
+                        <ul class="top3">
+                            <button class="botao-musica" data-index="21">Runaway (feat. Pusha T)</button>
+                            <button class="botao-musica" data-index="22">Power</button>
+                            <button class="botao-musica" data-index="23">All of the Lights (feat. Rihanna)</button>
+                        </ul>
+                    </div>
+
+                    <div id="menu">
+                        <button onclick="toggleBarra()">Mais tocadas ☰</button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
     <div class="container">
         <h1>Whole Lotta Red</h1>
         <div class="botao"><img class="album-cover" src="../img/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Capa do Álbum">
@@ -74,6 +154,30 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <div class="back-foot">
+            <div class="topicos">
+                <ul>
+                    <li><a href="#">Desenvolvedores</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Aplicativos</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 1MD. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/barraLateral.js"></script>
+    <script src="../js/doubleDrop.js"></script>
 </body>
 </html>
  
