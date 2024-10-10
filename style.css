@@ -62,13 +62,51 @@ button {
 /* ================== FOOTER ==================== */
 
 .back-foot {
-    height: 25dvh;
+    height: 10dvh;
     background-color: #252525;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
 }
-
-.topicos ul{
+ 
+.topicos ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+ 
+.topicos ul li {
+    margin: 0 15px;
+}
+ 
+.topicos ul li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    transition: color 0.3s;
+}
+ 
+.topicos ul li a:hover {
+    color: #ffffff;
+}
+ 
+.social-media {
+    margin: 15px 0;
+}
+ 
+.social-icon {
+    text-decoration: none;
+    color: #b3b3b3;
+    margin: 0 10px;
+}
+ 
+.social-icon:hover {
+    color: #ffffff;
+}
+ 
+.copyright {
+    margin-top: 10px;
+    font-size: 0.9em;
 }
 
 
@@ -145,6 +183,14 @@ button {
     transition: 0.3s; 
 }
 
+.reprodutor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .barraLateral a:hover {
     background-color: #575757; 
 }
@@ -160,21 +206,45 @@ button {
 }
 
 .top3 {
-    display: none;
     display: flex;
     flex-direction: column;
     overflow: hidden; 
     transition: max-height 0.3s ease; 
-    max-height: 0;
+    max-height: 0px;
     margin-left: 20px;
     cursor: default;
 }
 
 .top3.mostrar {
-    display: block;
-    max-height: 100px;
+    display: flex;
+    text-align: justify;
+    max-height: 120px;
 }
 
-.top3 li{
-    margin: 10px;
+.top3 button {
+    background: none;
 }
+.top3 button:hover {
+    transform: scale(1.0);
+}
+
+#musica-conteiner {
+    overflow: hidden;
+    width: 255px;
+    white-space: nowrap;
+}
+
+/* #fade {
+    display: inline-block;
+    animation: carrossel 5s linear infinite;
+} */
+
+/* @keyframes carrossel {
+    0% {
+        transform: translateX(200%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+} */
