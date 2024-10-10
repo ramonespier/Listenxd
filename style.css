@@ -223,9 +223,15 @@ button {
 
 .top3 button {
     background: none;
+    border-radius: 0px;
+    margin: 1px;
+    padding: 3px;
+    margin-right: 17px;
 }
 .top3 button:hover {
     transform: scale(1.0);
+    background-color: #575757; 
+
 }
 
 #musica-conteiner {
