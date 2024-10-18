@@ -114,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main class="separador">
         <section class="formulario">
             <form class="retangle" action="../index.html" method="post">
-                <h1>LOGIN</h1>
+                <h1>Entre em sua conta</h1>
                 <input type="email" name="email" required placeholder="Insira seu e-mail">
 
                 <input type="password" name="senha" required placeholder="Insira sua senha">
