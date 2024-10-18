@@ -1,28 +1,52 @@
+<?php
+session_start();
+
+$usuario = [
+    "email" => " ",
+    "senha" => " ",
+];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['email'];
+    $senha = $_POST['senha'];
+
+
+    if (is_array($usuario) && isset($usuario[$username]) && $usuario[$username] === $senha) {
+        $_SESSION['email'] = $username;
+        header("Location: login.php");
+        exit();
+    } else {
+    }
+};
+?>
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="PT-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ListenXD</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Login - Listenxd</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./login.css">
 </head>
 
 <body>
+
     <header>
         <nav class="menu-navegacao">
 
-            <a href="#" class="titulo">Listenxd</a href="#">
+            <a href="../index.html" class="titulo">Listenxd</a href="#">
 
             <div class="drops">
-                <a href="./login/login.php" class="perfil">Perfil ▿</a>
+                <a href="../index.html" class="perfil">Home</a>
 
                 <div>
                     <div id="barraLateral" class="barraLateral">
                         <a href="#" class="fechar" onclick="toggleBarra()">&times;</a>
                         <div class="reprodutor">
-                            <audio id="audio"   controls></audio>
+                            <audio id="audio" controls></audio>
                             <div class="nomeMusica"></div>
                         </div>
                         <a href="#" onclick="toggleDropdown(event)">Metallica</a>
@@ -87,70 +111,18 @@
         </nav>
     </header>
 
-    <main>
-        <section class="album-container">
-            <a href="./html/kanye_west.html">
-                <div class="album">
-                    <img src="./img/kanyewest.jpg" alt="Capa do Álbum 1">
-                    <h2>My Beautiful Dark Twisted Fantasy </h2>
-                    <p>Kayne West</p>
-                </div>
-            </a>
-            <a href="./html/soad.html">
-                <div class="album">
-                    <img src="./img/71MT2hjHBvL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 2">
-                    <h2>Mezmerize</h2>
-                    <p>System of a Down
-                    </p>
-                </div>
-            </a>
-            <a href="./html/metallica.html">
-                <div class="album">
-                    <img src="./img/61EYnmmbzaL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 3">
-                    <h2>Ride the Lightning</h2>
-                    <p>Metallica
-                    </p>
-                </div>
-            </a>
-            <a href="./html/carti.html">
-                <div class="album">
-                    <img src="./img/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Capa do Álbum 4">
-                    <h2>Whole Lotta Red</h2>
-                    <p>Playboi Carti
-                    </p>
-                </div>
-            </a>
-            <a href="./html/travis.html">
-                <div class="album">
-                    <img src="./img/81nFF-rXdRL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 5">
-                    <h2>Astroword</h2>
-                    <p>Travis Scott</p>
-                </div>
-            </a>
-            <a href="./html/tyler.html">
-                <div class="album">
-                    <img src="./img/71Ls2qvxPjL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 6">
-                    <h2>Flower Boy</h2>
-                    <p>Tyler, the Creator</p>
-                </div>
-            </a>
-            <a href="./html/linkin-park.html">
-                <div class="album">
-                    <img src="./img/81jFI+p-oLL._UF894,1000_QL80_.jpg" alt="Capa do Álbum 7">
-                    <h2>Hybrid Theory</h2>
-                    <p>Linkin Park</p>
-                </div>
-            </a>
-            <a href="./html/sabbath.html">
-                <div class="album">
-                    <img src="./img/Black_Sabbath_-_Paranoid.jpg" alt="Capa do Álbum 8">
-                    <h2>Paranoid</h2>
-                    <p>Black Sabbath</p>
-                </div>
-            </a>
+
+
+    <main class="separador">
+        <section class="formulario">
+            <form class="retangle" action="../index.html" method="post">
+                <h1>LOGIN</h1>
+                Email: <input type="text" name="email" required>
+                Senha: <input type="password" name="senha" required>
+                <input type="submit" value="LOGIN">
+            </form>
         </section>
     </main>
-
 
     <footer>
         <div class="back-foot">
@@ -173,8 +145,24 @@
         </div>
     </footer>
 
-    <script src="./js/barraLateral.js"></script>
-    <script src="./js/doubleDrop.js"></script>
+    <script src="../js/barraLateral.js"></script>
+    <script src="../js/doubleDrop.js"></script>
+
+    <script>
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            return re.test(email);
+        }
+
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const emailInput = document.querySelector('input[name="email"]');
+            if (!validateEmail(emailInput.value)) {
+                alert('Por favor, insira um email válido que contenha "@"');
+                event.preventDefault();
+            }
+        });
+    </script>
 </body>
 
 </html>

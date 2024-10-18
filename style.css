@@ -35,6 +35,16 @@ body {
     transition: .7s;
 }
 
+.perfil {
+    border: none;
+    background-color: #202020;
+    color: aliceblue;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .7s;
+}
+
 .menu-navegacao button:hover{
     transform: scale(1.1);
 }
@@ -51,7 +61,15 @@ body {
 }
 
 .perfil {
-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    transition: .7s;
+}
+
+.perfil:hover {
+    transform: scale(1.1);
 }
 
 button {
