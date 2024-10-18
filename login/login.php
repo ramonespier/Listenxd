@@ -111,14 +111,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </nav>
     </header>
 
-
-
     <main class="separador">
         <section class="formulario">
             <form class="retangle" action="../index.html" method="post">
                 <h1>LOGIN</h1>
-                Email: <input type="text" name="email" required>
-                Senha: <input type="password" name="senha" required>
+                <input type="email" name="email" required placeholder="Insira seu e-mail">
+
+                <input type="password" name="senha" required placeholder="Insira sua senha">
+
                 <input type="submit" value="LOGIN">
             </form>
         </section>
